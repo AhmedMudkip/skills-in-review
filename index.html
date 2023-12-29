@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="output.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!-- TODO: let people be able to download/upload their answers -->
+        <main class="p-4">
+            <div class="flex justify-between border-8 border-solid border-green-400 p-4">
+                <div class="flex items-center">
+                    <input
+                        placeholder="Insert Skill"
+                        maxlength="25"
+                        type="text"
+                        class="skill border-4 border-solid border-green-400 p-2 text-lg"
+                    />
+                </div>
+                <select class="opinion border-4 focus:border-red-500">
+                    <option value="confident">confident in</option>
+                    <option value="love">love</option>
+                    <option value="adore">adore</option>
+                    <option value="dislike">dislike</option>
+                </select>
+                <button
+                    class="border-4 border-red-600 p-2 hover:cursor-pointer"
+                    onclick="addSkill()"
+                >
+                    Add
+                </button>
+            </div>
+            <div class="flex justify-between border-8 border-t-0 border-solid border-green-400 p-4">
+                <div class="flex items-center">
+                    <p class="text-3xl">25 character for the demo</p>
+                </div>
+                <p>😀</p>
+            </div>
+        </main>
+    </body>
+    <script>
+        twemoji.parse(document.body)
+    </script>
+</html>
